@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { ValueFeaturesSection } from "@/components/sections/ValueFeaturesSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -14,5 +15,10 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return <HeroSection />;
+  return (
+    <>
+      <HeroSection />
+      <ValueFeaturesSection />
+    </>
+  );
 }
