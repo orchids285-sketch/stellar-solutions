@@ -109,6 +109,7 @@ export function ValueFeaturesSection() {
 
   return (
     <section
+      data-vf
       className="bg-white"
       style={{
         padding: "120px 0",
@@ -165,6 +166,7 @@ export function ValueFeaturesSection() {
 
         {/* Bento grid */}
         <div
+          data-vf-grid
           className="grid"
           style={{
             gap: "16px",
@@ -232,19 +234,19 @@ export function ValueFeaturesSection() {
       </div>
 
       <style>{`
-        .grid > :last-child { grid-column: span 2; }
+        [data-vf-grid] > :last-child { grid-column: span 2; }
         @media (max-width: 991px) {
           section[data-vf] { padding: 64px 0 !important; }
         }
         @media (max-width: 767px) {
-          .grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-          .grid > :nth-child(2) { grid-row: span 2 !important; }
-          .grid > :last-child { grid-column: span 2 !important; }
+          [data-vf-grid] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+          [data-vf-grid] > :nth-child(2) { grid-row: span 2 !important; }
+          [data-vf-grid] > :last-child { grid-column: span 2 !important; }
         }
         @media (max-width: 479px) {
-          .grid { grid-template-columns: 1fr !important; grid-auto-rows: auto !important; }
-          .grid > * { grid-row: auto !important; grid-column: auto !important; min-height: 240px !important; }
-          .grid > :nth-child(2) { min-height: 300px !important; }
+          [data-vf-grid] { grid-template-columns: 1fr !important; grid-auto-rows: auto !important; }
+          [data-vf-grid] > * { grid-row: auto !important; grid-column: auto !important; min-height: 240px !important; }
+          [data-vf-grid] > :nth-child(2) { min-height: 300px !important; }
         }
       `}</style>
     </section>
